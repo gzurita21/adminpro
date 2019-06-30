@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // Components
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -9,6 +10,9 @@ import { PagesComponent } from './pages.component';
 // Modules
 import { SharedModule } from '../shared/shared.module';
 import { PAGES_ROUTES } from './pages.routes';
+import { ComponentsModule } from '../components/components.module';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
     declarations: [
@@ -24,7 +28,11 @@ import { PAGES_ROUTES } from './pages.routes';
     ],
     imports: [
         SharedModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        FormsModule,
+        ComponentsModule,
+        CommonModule,
+        BrowserModule
     ]
 })
 export class PagesModule { }
